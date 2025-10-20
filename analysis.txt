@@ -1,0 +1,25 @@
+Cyber Security Internship — Task 1 Analysis
+-------------------------------------------
+
+Scanned Network Range: 192.168.1.0/24
+Tool Used: Nmap v7.98  (TCP SYN scan)
+
+Observations:
+1. 192.168.1.1 → Router (Zyxel Communications)
+   Open Ports: 53 (DNS), 443 (HTTPS), 3517 (802‑11‑iapp)
+   Risk: Router exposes management and DNS ports. Secure with strong admin password and firmware updates.
+
+2. 192.168.1.3 → Unknown device, all ports closed.
+   Risk: Minimal, may be an IoT or inactive client.
+
+3. 192.168.1.4 → Apple mobile device.
+   Open Port: 62078 (iPhone sync).
+   Risk: Normal for iOS pairing; ensure trusted PC connection only.
+
+4. 192.168.1.6 → Local host (ItsSumanth)
+   Open Ports: 135, 139, 445.
+   Risk: File‑sharing ports (SMB). Disable if not required to reduce lateral attack surface.
+
+Conclusion:
+The local network shows only a few devices and standard open ports.
+Router and PC exposure should be minimized by ensuring firewall and password protection are active.
